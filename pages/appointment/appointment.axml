@@ -1,0 +1,178 @@
+<view class="appointment"  catchtouchmove="true">
+	<view class="appiontCard">
+		<view class="topCard">
+			<view class="appiontPic">
+				<image src="{{meetInfo.icon}}" mode="scaleToFill" />
+			</view>
+			<view class="appiontText">
+				<view class="appiontitle">{{meetInfo.maxCapacity}}人 | 会议室{{meetInfo.roomName}}</view>
+				<view class="smallTitle">华峰国际大厦{{meetInfo.location}}</view>
+				<view class="smallCard">
+					<block a:for="{{meetInfo.supporting}}" a:if="index">
+						<view class="cardlist">{{item}}</view>
+					</block>
+					<view class="clear">
+				</view>
+			</view>
+			</view>
+			<view class="clear">
+			</view>
+		</view>
+		<view class="chooseTime">
+			<view class="timeLeft" onTap="changeDate">
+				<view class="timeTitle">使用日期</view>
+				<view class="chooseDate">
+					<text>{{nowDate}}</text>
+					<text class="backDate"></text>
+					<image class="selectIcon" src="../../image/downIcon.png" mode="scaleToFill" />
+				</view>
+				<!-- <view class="nowText">今天</view> -->
+			</view>
+			<view class="timeRight" onTap="changeframe">
+				<view class="timeTitle">使用时段</view>
+				<view class="timeFrame">
+					<text a:if="{{outTime == ''}}">请选择使用时段</text>
+					<text class="cinter">{{outTime}}</text>
+					<text a:if="{{outTime != ''}}" class="backDate"></text>
+					<image class="selectIcon rightIcon" src="../../image/downIcon.png" mode="scaleToFill" />
+				</view>
+				<view class="nowText">{{timeframe}}</view>
+			</view>
+			<view class="clear"></view>
+			<view class="lines"></view>
+		</view>
+	</view>
+	<view class="meetlist">
+		<view class="listMain">
+			<view class="listText"><text class="mustFill">*</text>会议主题</view>
+			<view class="listRight">
+				<input type="text" value="{{meetTitle}}" onInput="advMtitle" placeholder="请输入会议主题"/>
+			</view>
+			<view class="clear"></view>
+		</view>
+		<view class="listMain noBor">
+			<view class="listText"><text class="mustFill">*</text>会议摘要</view>
+			<block a:if="{{digestStatus}}">
+				<view class="listRight" onTap="tapDigest">
+					<text class="textdigest">请输入会议摘要</text>
+				</view>
+			</block>
+			<view class="clear"></view>
+		</view>
+		<block a:if="{{textStatus}}">
+			<view>
+				<textarea class="digestArea" maxlength="-1" onBlur="loseFocus" focus="true" onInput="advArea" auto-height="true" placeholder="摘要"/>
+			</view>
+		</block>
+	</view>
+	<view class="meetlist">
+		<view class="listMain">
+			<view class="listText">发起人</view>
+			<view class="listBor">
+				<!-- <image a:if="{{userAvatar != ''}}" src="{{userAvatar}}" mode="scaleToFill" /> -->
+				<text class="noPicText">{{userName}}</text>
+			</view>
+			<view class="clear">
+			</view>
+		</view>
+		<view class="personal">
+			<view class="listText"><text class="mustFill">*</text>参会人员</view>
+			<view class="rightext">{{personalNum}}/50</view>
+			<view class="clear"></view>
+			<view class="choosePer">
+				<view class="perPic">							
+					<!-- <image a:if="{{userAvatar != ''}}" src="{{userAvatar}}" mode="scaleToFill" /> -->
+					<text class="noPicText" >{{userName}}</text>
+				</view>
+				<view class="rightChange" onTap="cPersonal">
+					<block>
+						<view class="perList">
+							<view class="joinPer" a:for="{{localPersonArr}}" a:key="index">
+								<!-- <image a:if="{{item.avatar != ''}}" src="{{item.avatar}}" mode="scaleToFill" /> -->
+								<text class="noPicText">{{item.name}}</text>
+							</view>
+						</view>
+					</block>
+					<text class="topText" a:if="{{textshow}}">请选择</text>
+					<!-- <text class="rightCbtn">群组</text> -->
+					<image class="rightCbtnIcon" src="../../image/rightIcon.png" mode="scaleToFill" />
+				</view>
+				<view class="clear"></view>
+			</view>
+		</view>
+	</view>
+	<view class="infoMain">
+		<picker onChange="rInfo" value="{{Infoindex}}" range="{{infoArr}}" range-key="name">
+			<view class="listMain">
+				<view class="listText">通知</view>
+				<view class="listRight">
+					<text>{{infoArr[Infoindex].name}}</text>
+					<image class="rightPic" src="../../image/rightIcon.png" mode="scaleToFill" />
+				</view>
+				<view class="clear"></view>
+			</view>	
+		</picker>
+		<picker onChange="rRemind" value="{{arrIndex}}" range="{{remindArr}}" range-key="name">
+			<view class="listMain noBor">
+				<view class="listText">提醒</view>
+				<view class="listRight">
+					<text>{{remindArr[arrIndex].name}}</text>
+					<image class="rightPic" src="../../image/rightIcon.png" mode="scaleToFill" />
+				</view>
+				<view class="clear"></view>
+			</view>	
+		</picker>
+	</view>
+	<view class="fg"></view>
+	<view class="footBtn">
+		<view class="orderBtn" onTap="orderBtnTap" a:if="{{sendOrder}}">发起预约</view>
+	</view>
+	<view class="mask" a:if="{{maskStatus}}" animation="{{maskAnimation}}" onTap="hideMask"></view>
+	<view class="propBot" animation="{{animationInfo}}">
+		<view class="propTitle">
+			<view class="propsmallTitle">使用时段</view>
+			<view class="propTime">
+				<view class="clickPrev"  onTap="prevBtn">
+					<image src="../../image/leftIcon.png" mode="scaleToFill" />
+					<text class="prevText {{texts == 1 ? 'tactive' : ''}}">前一天</text>
+					<view class="clear"></view>
+				</view>
+				<view class="propNowDate">
+					<view>{{nowDate}}</view>
+				</view>
+				<view class="clickNext" onTap="nextBtn">
+					<image src="../../image/rightIcon.png" mode="scaleToFill" />
+					<text class="nextText">后一天</text>
+					<view class="clear"></view>
+				</view>
+			</view>
+			<view class="clear"></view>
+		</view>
+		<view class="propCTime">
+			<scroll-view class="" style="{{propNum}}" scroll-y="true">
+				<view class="cTimeAm">
+					<view class="timecard">
+						<block a:for="{{orderTimeArr}}" key="{{index}}">
+							<view class="listsCards">
+								<view class="cardtexts">
+									<text a:if="{{index % 2 == 0}}">{{item.clock}}</text>
+								</view>
+								<view a:if="{{item.use == 1}}" class="timecardlist nactive" onTap="nclickT"></view>
+								<view a:if="{{item.use == 0}}" class="timecardlist" onTap="clickTimes" data-cindex = "{{index}}" data-cardT = "{{item.index}}"><image src="../../image/ctrue.png" mode="scaleToFill" /></view>
+								<view a:if="{{item.use == 2}}" class="timecardlist activeT" onTap="clickTimes" data-cindex = "{{index}}" data-cardT = "{{item.index}}"><image src="../../image/ctrue.png" mode="scaleToFill" /></view>
+							</view>
+						</block>
+						<view class="clear"></view>
+					</view>
+				</view>
+			</scroll-view>
+			<view class="statusexplain" a:if="{{noTime}}">
+				<text class="explainCard fexplain">可选</text>
+				<text class="explainCard sexplain">不可选</text>
+				<text class="explainCard texplain">已选</text>
+			</view>
+			<view class="timeInterval" a:if="{{botText}}">{{timeInterval}}</view>
+		</view>
+		<view class="electTime" onTap="submitOrder">选择使用时段</view>
+	</view>
+</view>

@@ -1,0 +1,57 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 24
+/svn/DingSmart/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/DingSmart/!svn/ver/21/H5/DingSmart
+END
+config.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/config.js
+END
+httpRequest.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/httpRequest.js
+END
+socket.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/socket.js
+END
+app.acss
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/app.acss
+END
+app.json
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/DingSmart/!svn/ver/20/H5/DingSmart/app.json
+END
+util.js
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/util.js
+END
+app.js
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/app.js
+END
+reconncet.js
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/reconncet.js
+END

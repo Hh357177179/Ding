@@ -1,0 +1,96 @@
+page{
+	background: #f6f6f6;
+}
+.meetDetail{
+	border: 1px solid rgba(0,0,0,0);
+}
+.clear{
+	clear: both;
+}
+.meetInfo{
+	margin-top: 32rpx;
+}
+.detailList{
+	border-bottom: 1px solid rgba(25,31,37,0.08);
+	background: #fff;
+	padding: 0 32rpx 26rpx;
+}
+.listLabel{
+	font-size: 34rpx;
+	color: #191F25;
+	width: 160rpx;
+	float: left;
+	padding-top: 24rpx;
+	line-height: 48rpx;
+}
+.listContent{
+	color:rgba(25,31,37,0.56);
+	font-size: 30rpx;
+	float: left;
+	width: 520rpx;
+	padding-top: 26rpx;
+	line-height: 44rpx;
+}
+.rightMeetPer{
+	float: right;
+	line-height: 50rpx;
+	color: rgba(25,31,37,0.72);
+	padding-top: 26rpx;
+	line-height: 33rpx;
+	font-size: 24rpx;
+}
+.cancelBtn{
+	width: 320rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	border: 1px solid rgba(25, 31, 37, 0.12);
+	border-radius: 6rpx;
+	text-align: center;
+	font-size:28rpx;
+	font-weight:500;
+	color:rgba(25,31,37,0.56);
+	margin: 40rpx auto 60rpx;
+}
+.attend{
+	margin-top: 24rpx;
+}
+.attendPer{
+	float: right;
+}
+.launchPer{
+	float: left;
+	width: 64rpx;
+	height: 64rpx;
+	border-radius: 50%;
+	background: #1AABF8;
+	color: #fff;
+	line-height: 64rpx;
+	text-align: center;
+	font-size: 28rpx;
+	overflow: hidden;
+}
+.launchPer image{
+	width: 100%;
+	height: 100%;
+}
+.addPer{
+	float: left;
+	border-radius: 50%;
+	background: #1AABF8;
+	color: #fff;
+	line-height: 64rpx;
+	text-align: center;
+	font-size: 28rpx;
+	width: 64rpx;
+	height: 64rpx;
+	margin-right: 12rpx;
+	overflow: hidden;
+}
+.addPer image{
+	width: 100%;
+	height: 100%;
+}
+.joinPerson{
+	color: #191F25;
+	font-size: 34rpx;
+}

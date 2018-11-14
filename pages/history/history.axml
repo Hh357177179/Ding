@@ -1,0 +1,46 @@
+<view class="history">
+	<block>
+		<block a:for="{{historyList}}" a:key="index">
+			<view class="historyList">
+			<view class="listTime">{{item.addTime}}</view>
+			<view class="historyCard">
+				<view class="cardList">
+					<text class="labeUse">使用日期：</text>
+					<text>{{item.date}}</text>
+					<text class="cardWeek">{{item.week}}</text>
+					<view class="clear"></view>
+				</view>
+				<view class="cardList">
+					<text class="labeUse">使用时段：</text>
+					<text>{{item.start}}-{{item.end}}（{{item.sortStr}}）</text>
+				</view>
+				<!-- <view class="cardList">
+					<text class="labeUse">使用时间：</text>
+					<text>0</text>
+				</view> -->
+				<view class="cardList">
+					<text class="labeUse">会议地址：</text>
+					<text class="midText">会议室{{item.roomName}} {{item.floorAddress}}</text>
+					<view class="clear"></view>
+				</view>
+				<view class="line"></view>
+				<view class="botDelete">
+					<text class="meetingStatus" a:if="{{item.state == 3}}">会议已取消</text>
+					<text class="meetingStatus" a:if="{{item.state == 2}}">会议已结束</text>
+					<!-- <text class="meetingStatus">会议未开始</text>
+					<text class="meetingStatus">会议进行中</text> -->
+					<text class="deleteBtn" onTap="deleteBtn" data-meetId="{{item.meetId}}">删除</text>
+				</view>
+			</view>
+		</view>
+		</block>
+	</block>
+	<block a:if="{{nodata}}">
+		<view class="nohistory">
+			<view class="noDataPic">
+				<image src="../../image/historyList.png" mode="scaleToFill" />
+			</view>
+			<view class="nohistoryText">历史记录为空</view>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,12 @@
+<view class="telbinding">
+  <view class="telMain">
+		<view class="tel">
+			<input type="text" maxlength="11" value="{{telVal}}" placeholder="请输入联系电话" onInput="advTel"/>
+		</view>
+		<view class="telCode">
+			<input type="text" maxlength="6" placeholder="请输入验证码" onInput="advCode" value="{{codeVal}}"/>
+			<button class="getCode" disabled="{{getDis}}" hover-class="none" onTap="sendCode">{{codeText}}</button>
+		</view>
+	</view>
+	<view onTap="submitTel" class="submitBtn {{btnNum == 1 ? 'active' : ''}}">确定</view> 
+</view>

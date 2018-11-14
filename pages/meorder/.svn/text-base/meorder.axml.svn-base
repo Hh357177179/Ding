@@ -1,0 +1,62 @@
+<view class="meorder">
+	<block>
+		<block a:for='{{meorderList}}' a:key="index">
+			<view class="orderList">
+			<view class="cardTime">{{item.nowtext}} 15:44</view>
+			<view class="cardMain">
+				<view class="cardTop" onTap="propOpen" data-index="{{index}}">
+					<view class="cardPic">
+						<image src="{{item.icon}}" mode="scaleToFill" />
+						<view class="padding" a:if="{{item.state == 1}}">进行中</view>
+					</view>
+					<view class="cardText">
+						<view class="cardTitle">
+							<text>会议室{{item.roomName}}</text>
+							<text class="week">{{item.week}}</text>
+						</view>
+						<view class="userTime">
+							<text class="timeLabel">使用日期：</text>
+							<text>{{item.date}}</text>
+						</view>
+						<view class="userTime">
+							<text class="timeLabel">使用时段：</text>
+							<text>{{item.start}}-{{item.end}}</text>
+						</view>
+					</view>
+					<view class="clear"></view>
+					<view class="cardLocal">
+						<view class="loaclList">
+							<image class="localIcon" src="../../image/flool.png" mode="scaleToFill" />
+							<text class="iconText">{{item.floorAddress}}</text>
+							<view class="clear"></view>
+						</view>
+						<view class="loaclList">
+							<image class="localIcon" src="../../image/local.png" mode="scaleToFill" />
+							<text class="iconText">{{item.location}}（{{item.roomName}}会议室）</text>
+							<view class="clear"></view>
+						</view>
+					</view>
+					<view class="progressBar" a:if="{{item.state == 1}}">
+						<progress percent="{{item.pross}}" active="true" stroke-width="12" color="#10AEFF" backgroundColor="#EDEDEE" activeColor="#1AABF8"/>
+					</view>
+				</view>
+				<view class="cardBtn">
+					<view class="btnSearch" a:if="{{item.state == 1}}">不可取消</view>
+					<view class="cancalBtn" a:if="{{item.state == 0}}" onTap="cancelOrder" data-meetids="{{item.meetId}}">取消预约</view>
+					<view class="btnSearch searchDetail" onTap="searchDetail" data-mId="{{item.meetId}}">查看详情</view>
+					<view class="clear"></view>
+				</view>
+			</view>
+		</view>
+	</block>
+	</block>
+	<block a:if="{{noData}}">
+		<view class="nohistory">
+			<view class="noDataPic">
+				<image src="../../image/noDataorder.png" mode="scaleToFill" />
+			</view>
+			<view class="nohistoryText">预约信息为空</view>
+		</view>
+	</block>
+	<view class="noDatesBot" a:if="{{noDateBot}}">已到底部了</view>
+</view>

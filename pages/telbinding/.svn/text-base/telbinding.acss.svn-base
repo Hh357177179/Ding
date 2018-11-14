@@ -1,0 +1,52 @@
+page {
+	background: #f6f6f6;
+	overflow: hidden;
+}
+.telbinding{
+	border: 1px solid rgba(0,0,0,0);
+}
+.telMain{
+	padding:0 32rpx;
+	background: #fff;
+	margin-top: 32rpx;
+}
+.tel, .telCode{
+	border-bottom: 1px solid rgba(25,31,37,0.08);
+	padding: 23rpx 0;
+}
+.tel input{
+	background: none;
+	font-size: 32rpx;
+}
+.telCode{
+	position: relative;
+}
+.getCode{
+	position: absolute;
+	top: 20rpx;
+	background: #1AABF8;
+	color: #fff;
+	border-radius: 6rpx;
+	font-size: 28rpx;
+	font-weight: 500;
+	width: 204rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	border: none;
+	right: 20rpx;
+}
+.submitBtn{
+	width: 686rpx;
+	background:rgba(26,171,248,0.28);
+	border-radius:6px;
+	font-size: 34rpx;
+	font-weight: 500;
+	color: #fff;
+	border: none;
+	margin: 78rpx auto 0;
+	line-height: 88rpx;
+	text-align: center;
+}
+.active{
+	background: #1AABF8;
+}

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/meorder/meorder",
+    "pages/history/history",
+    "pages/appointment/appointment",
+    "pages/telbinding/telbinding",
+    "pages/successful/successful",
+    "pages/meetdetail/meetdetail",
+    "pages/meetDevice/meetDevice",
+    "pages/personalDetail/personalDetail",
+    "pages/aboutMe/aboutMe"
+  ],
+  "window": {
+    "defaultTitle": "控客智享"
+  },
+  "tabBar": {
+    "textColor": "#999",
+    "selectedColor": "#1AABF8",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "会议室",
+        "icon": "image/list.png",
+        "activeIcon": "image/clist.png"
+      },
+      {
+        "pagePath": "pages/meorder/meorder",
+        "name": "我的预约",
+        "icon": "image/order.png",
+        "activeIcon": "image/corder.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "name": "历史记录",
+        "icon": "image/history.png",
+        "activeIcon": "image/chistory.png"
+      },
+			{
+        "pagePath": "pages/aboutMe/aboutMe",
+        "name": "关于我们",
+        "icon": "image/aboutme.png",
+        "activeIcon": "image/aboutmeC.png"
+      }
+    ]
+  }
+}

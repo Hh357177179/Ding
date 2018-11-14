@@ -1,0 +1,488 @@
+page{
+	background: #F6F6F6;
+	/* min-height: 100%; */
+	width: 100%;
+	height: 100%;
+	
+}
+.clear{
+	clear: both;
+}
+.appiontCard{
+	padding: 34rpx 0 30rpx 32rpx;
+	background: #fff;
+}
+.appiontPic {
+	width: 240rpx;
+	height: 180rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
+	margin-right: 32rpx;
+	float: left;
+}
+.appiontPic image{
+	width: 100%;
+	height: 100%;
+}
+.appiontText{
+	float: left;
+}
+.appiontitle{
+	color: #191F25;
+	font-size: 34rpx;
+	font-weight: 500;
+	line-height: 48rpx;
+}
+.smallTitle{
+	color:rgba(25,31,37,0.72);
+	font-size: 28rpx;
+	font-weight: 400;
+	line-height: 40rpx;
+	margin: 4rpx 0 22rpx 0;
+}
+.cardlist{
+	font-size: 20rpx;
+	font-weight:500;
+	color:rgba(25,31,37,0.4);
+	padding: 8rpx;
+	border-radius:4rpx;
+	border:1px solid rgba(25,31,37,0.4);
+	margin-right: 12rpx;
+	float: left;
+}
+.topCard{
+	border-bottom: 1px solid rgba(25,31,37,0.12);
+	padding-bottom: 32rpx;
+}
+.chooseTime {
+	margin-top: 21rpx;
+	position: relative;
+}
+.timeLeft, .timeRight{
+	width: 50%;
+	text-align: center;
+	color:rgba(25,31,37,0.4);
+	float: left;
+}
+.timeTitle {
+	width: 100%;
+	line-height: 40rpx;
+	margin-bottom: 4rpx;
+	font-size: 28rpx;
+}
+.chooseDate{
+	font-size: 32rpx;
+	color: #191F25;
+	line-height: 45rpx;
+	position: relative;
+}
+.selectIcon{
+	width: 23rpx;
+	height: 23rpx;
+	/* margin-left: 8rpx; */
+	position: absolute;
+	top: 8rpx;
+	right: 50rpx;
+}
+.backDate{
+	display: block;
+	width: 178rpx;
+	height: 12rpx;
+	background:rgba(255,148,62,0.28);
+	position: absolute;
+	left: 90rpx;
+	top: 20rpx;
+}
+.timeFrame {
+	position: relative;
+	line-height: 45rpx;
+	font-size: 32rpx;
+	color: #ff943e;
+}
+.rightIcon{
+	right: 35rpx;
+}
+.lines{
+	position: absolute;
+	height: 80rpx;
+	width: 1px;
+	background: rgba(25,31,37,.12);
+	left: 50%;
+	top: 20rpx;
+}
+.nowText{
+	font-size: 24rpx;
+	line-height: 40rpx;
+	/* margin-top: 12rpx; */
+}
+.meetlist{
+	margin-top: 32rpx;
+	background: #fff;
+}
+.listText{
+	color: #191F25;
+	font-size: 34rpx;
+	float: left;
+}
+.listRight{
+	color:rgba(25,31,37,0.56);
+	font-size: 30rpx;
+	float: right;
+	padding-right: 32rpx;
+}
+.rightPic{
+	width: 28rpx;
+	height: 28rpx;
+	float: right;
+	margin: 35rpx 0 08rpx;
+}
+.listMain{
+	margin-left: 32rpx;
+	border-bottom: 1px solid rgba(25,31,37,0.08);
+	line-height: 96rpx;
+}
+.noBor{
+	border-bottom: none;
+}
+.listRight input{
+	font-size: 30rpx;
+	margin-top: 19rpx;
+	width: 344rpx;
+	text-align: right;
+	width: 400rpx;
+	color:rgba(25,31,37,0.56);
+}
+.listBor{
+	width: 64rpx;
+	height: 64rpx;
+	border-radius: 50%;
+	background: #1AABF8;
+	float: right;
+	margin: 17rpx 32rpx 0 0;
+	line-height: 64rpx;
+	text-align: center;
+	overflow: hidden;
+}
+.listBor image{
+	width: 100%;
+	height: 100%;
+}
+.rightext{
+	color: 24rpx;
+	float: right;
+	color: rgba(25,31,37,0.72);
+}
+.personal{
+	padding: 26rpx 32rpx;
+}
+.choosePer{
+	margin-top: 24rpx;
+}
+.perPic{
+	width: 64rpx;
+	height: 64rpx;
+	border-radius: 50%;
+	background: #1AABF8;
+	float: left;
+	margin-right: 10rpx;
+	text-align: center;
+	line-height: 64rpx;
+	overflow: hidden;
+}
+.perList{
+	float: left;
+}
+.rightChange{
+	float: right;
+	font-size: 30rpx;
+}
+.rightCbtnIcon{
+	width: 28rpx;
+	height: 28rpx;
+	float: right;
+	margin-top: 18rpx;
+}
+.topText{
+	line-height: 64rpx;
+	color: rgba(25,31,37,0.28);
+}
+.rightCbtn{
+	border: 2px solid #1AABF8;
+	padding: 8rpx 28rpx;
+	font-weight: 500;
+	color: #1AABF8;
+	border-radius: 6rpx;
+}
+.infoMain{
+	margin-top: 32rpx;
+	background: #fff;
+}
+.textdigest{
+	color:rgba(25,31,37,0.28);
+}
+.mustFill{
+	color: #FF943E;
+	position: absolute;
+	left: 12rpx;
+}
+.digestArea{
+	padding-left: 32rpx;
+	font-size: 30rpx;
+	color:rgba(25,31,37,0.56);
+}
+
+.joinPer{
+	width: 64rpx;
+	height: 64rpx;
+	float: left;
+	background: #1AABF8;
+	border-radius: 50%;
+	margin-right: 10rpx;
+	overflow: hidden;
+	line-height: 64rpx;
+	text-align: center;
+}
+.joinPer image{
+	width: 100%;
+	height: 100%;
+}
+.changeInform{
+	border-radius: 6rpx;
+	width: 354rpx;
+	float: right;
+	margin: 16rpx 32rpx 0 0;
+	font-size: 28rpx;
+	line-height: 68rpx;
+	color: #1AABF8;
+	border: 1px solid #1AABF8;
+	box-sizing: border-box;
+}
+.electInfo{
+	display: inline-block;
+	text-align: center;
+	width: 50%;
+}
+.active{
+	color: #fff;
+	background: #1AABF8;
+}
+.footBtn{
+	width: 100%;
+	padding: 20rpx 0 18rpx;
+	border: 1rpx solid rgba(25,31,37,0.12);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+}
+.orderBtn{
+	background: #1AABF8;
+	width: 686rpx;
+	border-radius: 6rpx;
+	color: #fff;
+	font-weight: 500;
+	font-size: 34rpx;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 44rpx;
+	padding: 22rpx 0;
+}
+.fg{
+	width: 100%;
+	height: 160rpx;
+}
+
+
+/* 底部弹出框 */
+.propBot{
+	height: 75%;
+	position: fixed;
+	bottom: -75%;
+	left: 0;
+	right: 0;
+	z-index: 2000;
+	background: #fff;
+	/* padding: 22rpx 32rpx 18rpx; */
+}
+.mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.72);
+	z-index: 11;
+}
+.propTitle{
+	padding: 22rpx 32rpx 18rpx;
+}
+.propsmallTitle{
+	text-align: center;
+	color: rgba(25,31,37,0.4);
+	line-height: 40rpx;
+	font-size: 28rpx;
+	margin-bottom: 4rpx;
+}
+.clickPrev{
+	width: 33.33%;
+	float: left;
+}
+.clickPrev image{
+	width: 28rpx;
+	height: 28rpx;
+	float: left;
+	margin-top: 8rpx;
+	margin-right: 10rpx;
+}
+.prevText{
+	float: left;
+	font-size: 30rpx;
+	line-height: 42rpx;
+}
+.propNowDate{
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	color: #191F25;
+	font-size: 32rpx;
+	font-weight: bold;
+	line-height: 42rpx;
+}
+.clickNext{
+	width: 33.33%;
+	float: right;
+}
+.clickNext image{
+	width: 28rpx;
+	height: 28rpx;
+	float: right;
+	margin-top: 8rpx;
+	margin-left: 10rpx;
+}
+.nextText{
+	float: right;
+	font-size: 30rpx;
+	line-height: 42rpx;
+}
+.propCTime{
+	/* margin-top: 40rpx; */
+	background: #F6F6F6;
+	padding: 32rpx 40rpx 10rpx;
+	border-bottom: 1px solid rgba(25,31,37,0.12);
+}
+.timecardlist{
+	width: 80rpx;
+	height: 80rpx;
+	background: #fff;
+	border-radius:6px;
+	margin-top: 10rpx;
+}
+.cardtexts{
+	width: 80rpx;
+	height: 30rpx;
+	font-size: 26rpx;
+	color: rgba(25,31,37,0.4);
+}
+.listsCards{
+	float: left;
+	width: 80rpx;
+	margin-bottom: 20rpx;
+	margin-right:4rpx;
+}
+.timecardlist image{
+	width: 56rpx;
+	height: 56rpx;
+	margin-left: 12rpx;
+	margin-top: 6rpx;
+}
+.listsCards:nth-of-type(8n) {
+	margin-right: 0;
+}
+.timecardbot{
+	margin-top: 11rpx;
+}
+.timecardlistbot{
+	width: 80rpx;
+	height: 80rpx;
+	background: #fff;
+	float: left;
+	border-radius:6px;
+	margin-right: 4rpx;
+}
+.statusexplain{
+	height: 44rpx;
+	margin-top: 20rpx;
+	text-align: center;
+}
+.timeInterval{
+	height: 44rpx;
+	margin-top: 20rpx;
+	text-align: center;
+	color: #1AABF8;
+	font-size: 28rpx;
+	line-height: 44rpx;
+}
+.explainCard{
+	font-size:20rpx;
+	font-weight: 500;
+	margin-right: 24rpx;
+	padding: 8rpx 9rpx;
+	border-radius:4rpx;
+	color:rgba(25,31,37,0.72);
+}
+.fexplain{
+	background: #fff;
+}
+.sexplain{
+	background:rgba(25,31,37,0.08);
+}
+.texplain{
+	background: #1AABF8;
+	color: #fff;
+}
+.electTime{
+	color: #fff;
+	font-size: 34rpx;
+	width:686rpx;
+	border-radius: 6rpx;
+	line-height: 88rpx;
+	background: #1AABF8;
+	text-align: center;
+	margin: 0.5vh auto;
+}
+.activeT{
+	background: #1AABF8;
+}
+.scrollClass{
+	max-height: 460rpx;
+}
+.textColor{
+	color: rgba(0,0,0,0);
+}
+.nactive {
+	background:rgba(25,31,37,0.08);
+}
+.timeInterval{
+	/* color: #1AABF8;
+	font-size: 28rpx;
+	height: 40rpx;
+	line-height: 40rpx; */
+}
+.cinter{
+	color: #191F25;
+	font-size: 32rpx;
+	font-weight:400;
+}
+.perPic image {
+	width: 100%;
+	height: 100%;
+}
+.noPicText{
+	font-size: 28rpx;
+	color: #fff;
+}
+.tactive{
+	color:rgba(25,31,37,0.4);
+}

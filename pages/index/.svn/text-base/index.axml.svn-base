@@ -1,0 +1,31 @@
+<view class="home">
+	<block a:for="{{meetingArr}}" key="{{item}}">
+		<view class="homeCard">
+			<view class="cardTop">
+				<view class="listPic">
+					<image src="{{item.icon}}" mode="scaleToFill" />
+				</view>
+				<view class="listText">
+					<view class="listTitle">{{item.maxCapacity}}人 | 会议室{{item.roomName}}</view>
+					<view class="smallTitle">华峰国际大厦{{item.location}}</view>
+					<view class="smallCard">
+						<block a:for="{{item.supporting}}">
+							<view class="cardlist">{{item}}</view>
+						</block>
+					</view>
+				</view>
+				<view class="clear"></view>
+			</view>
+			<view class="scalePic">
+				<view class="yetCards">
+					<block a:for="{{item.lstdate}}"  a:for-item="i">
+						<view class="yetOrder" a:if="{{i.use == 1}}"></view>
+						<view a:else class="noYet"></view>
+					</block>
+				</view>
+			</view>
+			<view class="orderBtn" data-encoding="{{item.encoding}}" catchTap="apponint">预约</view>
+			<view class="clear"></view>
+		</view>
+	</block>
+</view>

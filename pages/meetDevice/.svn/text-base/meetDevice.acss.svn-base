@@ -1,0 +1,213 @@
+page{
+	background: #f6f6f6;
+}
+.clear{
+	clear: both;
+}
+.propMain{
+
+}
+.propIcon{
+	width: 100%;
+	height: 320rpx;
+	background: #ccc;
+}
+.propIcon image {
+	width: 100%;
+	height: 100%;
+}
+.propMeetTit{
+	color: #191F25;
+	font-weight: 500;
+	font-size: 40rpx;
+	margin: 32rpx 0 16rpx 20rpx;
+}
+.userTimes{
+	font-size: 28rpx;
+	color:rgba(25,31,37,0.56);
+	line-height: 40rpx;
+	border-bottom: 1px solid rgba(25,31,37,0.08);
+	padding:0 20rpx 24rpx;
+}
+.rightText{
+	float: right;
+}
+.prop-name{
+	float: left;
+}
+.prop-local{
+	margin-top: 24rpx;
+	color: rgba(25,31,37,0.56);
+	font-size: 28rpx;
+	line-height: 40rpx;
+	padding: 0 20rpx 24rpx;
+	border-bottom: 1px solid rgba(25,31,37,0.08);
+}
+.prop-local image {
+	width: 34rpx;
+	height: 34rpx;
+	float: left;
+	margin-top: 3rpx;
+	margin-right: 6rpx;
+}
+.prop-text{
+	float: left;
+}
+.prop-device{
+	margin-top: 32rpx;
+	padding: 0 20rpx;
+}
+.prop-line{
+	width: 6rpx;
+	height: 80rpx;
+	background: #1AABF8;
+	border-radius: 4rpx;
+	float: left;
+	margin-right: 12rpx;
+}
+.line-name{
+	float: left;
+	width: 30rpx;
+	color: rgba(25,31,37,0.56);
+	font-size: 30rpx;
+	font-weight: 500;
+	line-height: 42rpx;
+}
+.screenMain{
+	margin-left: 30rpx;
+	float: left;
+	width: 600rpx;
+}
+.prop-screen{
+	/* width: 280rpx;
+	height: 160rpx; */
+	/* float: left; */
+	/* width: 220rpx; */
+	background: #fff;
+	padding: 28rpx 20rpx 16rpx;
+	border-radius: 6rpx;
+	margin-right: 20rpx;
+	display: inline-block;
+}
+.screeIcon{
+	width: 72rpx;
+	height: 68rpx;
+}
+.screeIcon image {
+	width: 100%;
+	height: 100%;
+}
+.scrText{
+	color:rgba(25,31,37,0.28);
+	font-size:20rpx;
+	text-align: center;
+	margin-top: 20rpx;
+}
+.scree_left{
+	margin-right: 40rpx;
+	float: left;
+}
+.scree_right{
+	float: left;
+}
+.onoff{
+	width: 64rpx;
+	height: 64rpx;
+	margin: 23rpx auto 0;
+}
+.right_text{
+	font-size:24rpx;
+	color:rgba(25,31,37,0.56);
+}
+.onoff image {
+	width: 100%;
+	height: 100%;
+}
+.prop-only-device{
+	margin-top: 44rpx;
+	padding: 0 20rpx;
+}
+.device_list{
+	/* float: left; */
+	/* margin-right: 40rpx; */
+	text-align: center;
+	width: 130rpx;
+	display: inline-block;
+	height: 100%;
+}
+.device_pic{
+	width: 60rpx;
+	height: 64rpx;
+	margin: 0 auto 20rpx;
+}
+.device_pic image{
+	width: 100%;
+	height: 100%;
+}
+.device_text{
+	color:rgba(25,31,37,0.56);
+	font-size: 24rpx;
+	margin-bottom: 8rpx;
+}
+.device_state{
+	width: 26rpx;
+	height: 8rpx;
+	background:rgba(25,31,37,0.28);
+	border-radius: 4rpx;
+	margin: 0 auto;
+}
+.device_Name{
+	margin-right: 30rpx;
+	float: left;
+}
+.device_main{
+	/* background: #ccc; */
+	float: left;
+	width: 600rpx;
+	/* height: 140rpx; */
+	overflow: hidden;
+	height: 125rpx;
+}
+.screen_scroll{
+	min-width: 600rpx;
+	white-space: nowrap;
+	height: 170rpx;
+}
+.my_scroll{
+	min-width: 600rpx;
+	white-space: nowrap;
+	height: 140rpx;
+}
+::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+.remind_text{
+	line-height: 64rpx;
+	text-align: center;
+	color: #1AABF8;
+	border-bottom: 1px solid rgba(25,31,37,0.12);
+}
+.botTextBtn{
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.btnBot{
+	background:rgba(26,171,248,0.28);
+	width: 686rpx;
+	line-height: 88rpx;
+	border-radius: 6rpx;
+	margin: 20rpx auto 18rpx;
+	text-align: center;
+	font-weight:500;
+	line-height:44px;
+	font-size: 34rpx;
+	color: #fff;
+}
+.device_stateO{
+	background: #1AABF8;
+}

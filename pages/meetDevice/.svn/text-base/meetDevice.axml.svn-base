@@ -1,0 +1,101 @@
+<view>
+  	<view class="propMain">
+			<view class="propIcon">
+				<image src="{{meetInfo.icon}}" mode="scaleToFill" />
+			</view>
+			<view class="propMeetTit">会议室{{meetInfo.roomName}}</view>
+			<view class="userTimes">
+				<text>使用日期：{{meetInfo.date}}</text>
+				<text class="rightText">使用时段：{{meetInfo.start}}-{{meetInfo.end}}</text>
+				<view class="clear"></view>
+			</view>
+			<view class="prop-local">
+				<view>
+					<image class="localIcon" src="../../image/flool.png" mode="scaleToFill" />
+					<text class="prop-text">{{meetInfo.floorAddress}}</text>
+					<view class="clear"></view>
+				</view>
+				<view>
+					<image class="localIcon" src="../../image/local.png" mode="scaleToFill" />
+					<text class="prop-text">{{meetInfo.location}}</text>
+					<view class="clear"></view>
+				</view>
+			</view>
+			<view class="prop-device">
+				<view class="prop-name">
+					<text class="prop-line"></text>
+					<text class="line-name">情景</text>
+					<view class="clear"></view>
+				</view>
+				<view class="screenMain">
+					<scroll-view class="screen_scroll" scroll-x="{{true}}">
+						<block a:for="{{scenceArr}}" a:key="index">
+							<view class="prop-screen">
+								<view class="scree_left">
+									<view class="screeIcon">
+										<image src="../../image/openClose.png" mode="scaleToFill" />
+									</view>
+									<view class="scrText">已关闭</view>
+								</view>
+								<view class="scree_right">
+									<view class="right_text">{{item.sceneName}}</view>
+									<view class="onoff">
+										<image src="../../image/closes.png" mode="scaleToFill" />
+									</view>
+								</view>
+							</view>
+						</block>
+					</scroll-view>
+					<!-- <view class="clear"></view> -->
+				</view>
+			</view>
+			<view class="clear"></view>
+			<view class="prop-only-device">
+				<view class="prop-name device_Name">
+					<text class="prop-line"></text>
+					<text class="line-name">设备</text>
+					<view class="clear"></view>
+				</view>
+				<view class="device_main">
+					<scroll-view scroll-x="{{true}}" class="my_scroll"> 
+						<block a:for="{{meetDeviceArr}}" a:key="index">
+							<view class="device_list" a:if="{{item.device_type_sts_code != 'Sts_ZIGBEE_DoorSensor'}}">
+								<block a:if="{{item.device_status.switch == 'Off'}}">
+									<view class="device_pic">
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_FancoilUnit'}}" src="../../image/airC.png" mode="scaleToFill" />
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_Light'}}" src="../../image/lightC.png" mode="scaleToFill" />
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_CodedLock'}}" src="../../image/doorC.png" mode="scaleToFill" />
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_CurtainMotor'}}" src="../../image/motorC.png" mode="scaleToFill" />
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_DoorSensor'}}" src="../../image/motorO.png" mode="scaleToFill" />
+									</view>
+								</block>
+								<block a:else>
+									<view class="device_pic">
+										<!-- 空调 -->
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_FancoilUnit'}}" src="../../image/airO.png" mode="scaleToFill" />
+										<!-- 灯 -->
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_Light'}}" src="../../image/lightO.png" mode="scaleToFill" />
+										<!-- 门锁 -->
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_CodedLock'}}" src="../../image/doorO.png" mode="scaleToFill" />
+										<!-- 幕布 -->
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_CurtainMotor'}}" src="../../image/motorO.png" mode="scaleToFill" />
+										<!-- 门磁传感器 -->
+										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_DoorSensor'}}" src="../../image/motorO.png" mode="scaleToFill" />
+									</view>
+								</block>
+								<view class="device_text">{{item.device_name}}</view>
+								<view class="device_state" a:if="{{item.device_status.switch == 'Off'}}"></view>
+								<view class="device_state device_stateO" a:else></view>
+							</view>
+						</block>
+						<view class="clear"></view>
+					</scroll-view>
+				</view>
+				<view class="clear"></view>
+			</view>
+			<view class="botTextBtn">
+				<view class="remind_text">会议开始前15分钟可开门</view>
+				<view class="btnBot">开门</view>
+			</view>
+		</view>
+</view>

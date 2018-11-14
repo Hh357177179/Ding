@@ -1,0 +1,10 @@
+<view class="successful">
+	<view class="topIcon">
+		<view class="succIcon">
+			<image src="../../image/successful.png" mode="scaleToFill" />
+		</view>
+		<view class="successText">预约成功</view>
+	</view>
+	<view class="searchDetail" onTap="backDetail">查看我的预约</view>
+	<view class="backList" onTap="backMeetList">返回会议室</view>
+</view>

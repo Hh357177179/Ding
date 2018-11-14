@@ -1,0 +1,83 @@
+<view class="meetDetail">
+	<view class="meetInfo">
+		<view class="detailList">
+			<text class="listLabel">使用日期</text>
+			<text class="listContent">{{detailObj.date}} {{detailObj.week}}</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">使用时段</text>
+			<text class="listContent">{{detailObj.start}}-{{detailObj.end}}</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">会议地址</text>
+			<text class="listContent">会议室{{detailObj.roomName}} {{detailObj.floorAddress}}</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">详细地址</text>
+			<text class="listContent">{{detailObj.location}}</text>
+			<view class="clear"></view>
+		</view>
+	</view>
+	
+	<view class="meetInfo">
+		<view class="detailList">
+			<text class="listLabel">会议主题</text>
+			<text class="listContent">{{detailObj.meetingTheme}}</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">会议摘要</text>
+			<text class="listContent">{{detailObj.meetingDigest}}</text>
+			<view class="clear"></view>
+		</view>
+	</view>
+	
+	<view class="meetInfo">
+		<view class="detailList">
+			<text class="listLabel">发起人</text>
+			<text class="listContent">{{userName}}</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">参会人员</text>
+			<text class="rightMeetPer">{{detailObj.conferee.length + 1}}人</text>
+			<view class="clear"></view>
+			<view class="attend" onTap="searchPerson">
+			<view class="launchPer">
+				<text>{{userName}}</text>
+				<!-- <image a:else src="{{userAvatar}}" mode="scaleToFill" /> -->
+			</view>
+			<view class="attendPer">
+				<block a:for="{{allArrs}}" a:key="index">
+					<view class="addPer">
+						<text>{{item.name}}</text>
+						<!-- <image a:else src="{{item.avatar}}" mode="scaleToFill" /> -->
+					</view>
+				</block>
+			</view>
+			<view class="clear"></view>
+		</view>
+	</view>
+	<view class="meetInfo">
+		<view class="detailList">
+			<text class="listLabel">通知</text>
+			<text class="listContent" a:if="{{detailObj.isRemind == 2}}">钉钉消息</text>
+			<text class="listContent" a:if="{{detailObj.isRemind == 0}}">拨打电话</text>
+			<text class="listContent" a:if="{{detailObj.isRemind == 1}}">DING一下</text>
+			<view class="clear"></view>
+		</view>
+		<view class="detailList">
+			<text class="listLabel">提醒</text>
+			<text class="listContent" a:if="{{detailObj.remindTime == 0}}">无提醒</text>
+			<text class="listContent" a:if="{{detailObj.remindTime == 1}}">准时提醒</text>
+			<text class="listContent" a:if="{{detailObj.remindTime == 2}}">提前5分钟</text>
+			<text class="listContent" a:if="{{detailObj.remindTime == 3}}">提前15分钟</text>
+			<text class="listContent" a:if="{{detailObj.remindTime == 4}}">提前30分钟</text>
+			<view class="clear"></view>
+		</view>
+	</view>
+	<view class="cancelBtn" onTap="cancelBtn" a:if="{{detailObj.state == 0}}">取消预约</view>
+</view>

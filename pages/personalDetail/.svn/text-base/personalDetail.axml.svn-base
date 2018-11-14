@@ -1,0 +1,14 @@
+<view class="person_detail">
+  <view class="p_dMain">
+		<block a:for="{{perDetails}}" a:key="index">
+			<view class="p_detailList" onTap="dingOnly" data-uid="{{item.userId}}">
+				<view class="p_dPic">{{item.name}}</view>
+				<view class="p_dName">{{item.name}}</view>
+				<view class="dingPic">
+					<image src="../../image/ding.png" mode="scaleToFill" />
+				</view>
+				<view class="clear"></view>
+			</view>
+		</block>
+	</view>
+</view>

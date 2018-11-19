@@ -5,7 +5,7 @@ V 24
 K 25
 svn:wc:ra_dav:version-url
 V 39
-/svn/DingSmart/!svn/ver/21/H5/DingSmart
+/svn/DingSmart/!svn/ver/23/H5/DingSmart
 END
 config.js
 K 25
@@ -19,12 +19,6 @@ svn:wc:ra_dav:version-url
 V 54
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/httpRequest.js
 END
-socket.js
-K 25
-svn:wc:ra_dav:version-url
-V 49
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/socket.js
-END
 app.acss
 K 25
 svn:wc:ra_dav:version-url
@@ -35,7 +29,7 @@ app.json
 K 25
 svn:wc:ra_dav:version-url
 V 48
-/svn/DingSmart/!svn/ver/20/H5/DingSmart/app.json
+/svn/DingSmart/!svn/ver/23/H5/DingSmart/app.json
 END
 util.js
 K 25
@@ -47,11 +41,5 @@ app.js
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/app.js
-END
-reconncet.js
-K 25
-svn:wc:ra_dav:version-url
-V 52
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/reconncet.js
+/svn/DingSmart/!svn/ver/24/H5/DingSmart/app.js
 END

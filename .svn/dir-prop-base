@@ -1,7 +1,8 @@
 K 10
 svn:ignore
-V 10
+V 20
 .git
 .tea
+README.md
 
 END

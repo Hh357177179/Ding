@@ -1,3 +1,4 @@
 <view>
-  New Page
+<web-view id="web-view-1" src="http://share.page.vaiwan.com:8081/ding/index.html">
+</web-view>
 </view>

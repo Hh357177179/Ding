@@ -4,12 +4,9 @@ page{
 .clear{
 	clear: both;
 }
-.propMain{
-
-}
 .propIcon{
 	width: 100%;
-	height: 320rpx;
+	height: 380rpx;
 	background: #ccc;
 }
 .propIcon image {
@@ -77,6 +74,7 @@ page{
 	margin-left: 30rpx;
 	float: left;
 	width: 600rpx;
+	height: 150rpx;
 }
 .prop-screen{
 	/* width: 280rpx;
@@ -194,7 +192,7 @@ page{
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	right: 0;
+	width: 100%;
 }
 .btnBot{
 	background:rgba(26,171,248,0.28);
@@ -208,6 +206,178 @@ page{
 	font-size: 34rpx;
 	color: #fff;
 }
+.openBtn{
+	background: #1AABF8;
+}
 .device_stateO{
 	background: #1AABF8;
+}
+
+/* 空调面板 */
+.airBack{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.airpanel{
+	width: 610rpx;
+	background: #fff;
+	border-radius:12px;
+	/* margin: 200rpx auto 0; */
+	padding: 40rpx;
+	position: fixed;
+	top: 200rpx;
+	left: calc(50% - 345rpx);
+	z-index: 12;
+}
+.airtit{
+	float: left;
+	text-align: center;
+}
+.airname{
+	font-size:32rpx;
+	font-weight:500;
+	line-height:45rpx;
+	color: #191F25;
+}
+.airtemp{
+	color:rgba(25,31,37,0.28);
+	line-height:33rpx;
+	font-size:24rpx;
+}
+.topTitle{
+	position: relative;
+	margin-bottom: 32rpx;
+}
+.openBtnIcon{
+	width: 48rpx;
+	height: 48rpx;
+	float: right;
+	position: absolute;
+	z-index: 14;
+	right: -20rpx;
+	padding: 20rpx;
+	top: -20rpx;
+	/* background: #fff; */
+}
+.openBtnIcon image{
+	width: 100%;
+	height: 100%;
+}
+.airNum{
+	text-align: center;
+}
+.airpattern{
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(25,31,37,0.28);
+	line-height:33rpx;
+}
+.airNumber{
+	color: #191F25;
+	font-size:120rpx;
+	/* line-height:143rpx; */
+	font-weight:300;
+	position: relative;
+}
+.tempIcon{
+	font-size:28rpx;
+	font-weight:300;
+	color:rgba(25,31,37,0.28);
+	line-height:34rpx;
+	position: absolute;
+	top: 20rpx;
+}
+.airplan{
+	padding: 0 24rpx;
+	margin-top: 28rpx;
+	display: flex;
+	margin-bottom: 88rpx;
+	justify-content: space-between;
+}
+.subtractIcon, .addIcon{
+	width: 44rpx;
+	height: 44rpx;
+	padding: 10rpx;
+}
+.subtractIcon image, .addIcon image{
+	width: 100%;
+	height: 100%;
+}
+/* .subtractIcon{
+	float: left
+}
+.addIcon{
+	float: right;
+} */
+.plan-view{
+	width: 400rpx;
+	/* float: left; */
+	/* margin-left: 40rpx; */
+}
+.slider_view{
+	width: 100%;
+	margin-top: 6rpx;
+}
+.botBtnIcon{
+	margin: 0 0 32rpx 0;
+	padding: 0 30rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.onlyIcon{
+	width: 96rpx;
+	height: 96rpx;
+}
+.onlyIcon image{
+	width: 100%;
+	height: 100%;
+}
+.smallIcon{
+	width: 60rpx;
+	height: 60rpx;
+	margin-top: 18rpx;
+}
+.smallIcon image{
+	width: 100%;
+	height: 100%;
+}
+.airOffMask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	position: absolute;
+	z-index: 13;
+	border-radius:12px;
+	top: 0;
+	left: 0;
+}
+.doat{
+	margin: 0 10rpx;
+}
+.sendWind {
+	margin-top: 6rpx;
+	text-align: center;
+}
+.snedPic{
+	width: 380rpx;
+	height: 220rpx;
+	margin: 0 auto;
+}
+.snedPic image{
+	width: 100%;
+	height: 100%;
+}
+.sendText{
+	margin-top: 20rpx;
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(25,31,37,0.28);
+	line-height:33rpx;
+	margin-bottom: 78rpx;
 }

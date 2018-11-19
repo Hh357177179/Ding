@@ -5,6 +5,9 @@ page{
 .clear{
 	clear: both;
 }
+.history{
+	margin-bottom: 40rpx;
+}
 .historyList{
 	margin-top: 32rpx;
 }
@@ -25,7 +28,7 @@ page{
 	background: #fff;
 	border-radius: 6rpx;
 	margin: 40rpx auto 0;
-	padding: 32rpx;
+	padding: 32rpx 32rpx 16rpx 32rpx;
 	font-size: 28rpx;
 }
 .cardList{

@@ -9,6 +9,7 @@ page{
 	/* overflow: hidden;
 	height: 100vh; */
 	border: 1px solid rgba(0,0,0,0);
+	padding-bottom: 40rpx;
 }
 .orderList{
 	margin-top: 40rpx;

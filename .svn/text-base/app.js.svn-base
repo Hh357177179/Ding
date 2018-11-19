@@ -4,22 +4,22 @@ let aPage = null;
 App({
   onLaunch(options) {
 		aPage = this
-		// dd.connectSocket({
-		// 	url: 'ws://172.17.130.225:8880',
-    //   success(e) {
-    //     console.log('创建成功');
-		// 		dd.onSocketOpen(function(e) {
-		// 			console.log('成功打开连接')
-		// 			aPage.globalData.DingSocket = 1
-		// 		})
-		// 		dd.onSocketError(function(e) {
-		// 			console.log('打开失败', e);
-		// 		});
-    //   },
-    //   fail(e) {
-    //     console.log('创建失败');
-    //   }
-    // });
+		dd.connectSocket({
+			url: 'ws://172.17.130.55:8888',
+      success(e) {
+        console.log('创建成功');
+				dd.onSocketOpen(function(e) {
+					console.log('成功打开连接')
+					aPage.globalData.DingSocket = 1
+				})
+				dd.onSocketError(function(e) {
+					console.log('打开失败', e);
+				});
+      },
+      fail(e) {
+        console.log('创建失败');
+      }
+    });
     
 		let corpId = options.query.corpId
 		this.globalData.corpId = corpId
@@ -36,6 +36,7 @@ App({
 						// console.log('登录成功返回',res)
 						if (res.data.resultCode == 200) {
 							this.globalData.token = res.data.result.token
+							this.globalData.uid = res.data.result.uid
 							let params = {
 								token: res.data.result.token
 							}
@@ -45,7 +46,7 @@ App({
 								this.globalData.userName = res.result.userName
 								this.globalData.userAvatar = res.result.avatar
 							})
-							this.globalData.regStatus = 1
+							this.globalData.regStatus = 1 
 						} else if (res.data.resultCode == 402) {
 							this.globalData.regStatus = 0
 						} else {
@@ -71,6 +72,7 @@ App({
 		userId: '',
 		userName: '',
 		userAvatar: '',
-		DingSocket: 0
+		DingSocket: 0,
+		uid: ''
 	}
 });

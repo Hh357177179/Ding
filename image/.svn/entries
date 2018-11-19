@@ -1,7 +1,7 @@
 10
 
 dir
-21
+23
 http://huangbin@172.17.2.254:8080/svn/DingSmart/H5/DingSmart/image
 http://huangbin@172.17.2.254:8080/svn/DingSmart
 
@@ -25,6 +25,40 @@ huangbin
 
 
 e11a6250-6489-4844-9797-57d0b1821139
+
+hotC.png
+file
+25
+
+
+
+2018-11-15T10:17:30.000000Z
+7d60095f5e9e2b7e5ae126dc787e3ef6
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4739
 
 screenO.png
 file
@@ -128,6 +162,40 @@ has-props
 
 1446
 
+sendH.png
+file
+25
+
+
+
+2018-11-15T10:29:57.000000Z
+298fbee08cd1328ee12bb5bc577dd80d
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12091
+
 motorC.png
 file
 
@@ -162,6 +230,74 @@ has-props
 
 1433
 
+windC.png
+file
+25
+
+
+
+2018-11-15T10:19:57.000000Z
+bb49978b7325618f2e2ecc2086bc5ec6
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5171
+
+sendL.png
+file
+25
+
+
+
+2018-11-15T10:29:01.000000Z
+f5f316cf793484ae77060497c1511353
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11746
+
 doorC.png
 file
 
@@ -195,6 +331,40 @@ has-props
 
 
 1811
+
+sendM.png
+file
+25
+
+
+
+2018-11-15T10:28:06.000000Z
+1bc9ac6b686db3f02a86d4f0bb36b6a1
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11950
 
 list.png
 file
@@ -502,6 +672,40 @@ has-props
 
 6096
 
+subtract.png
+file
+25
+
+
+
+2018-11-15T10:22:50.000000Z
+fc7917f36deb0c208e365916f598722e
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+208
+
 closes.png
 file
 
@@ -535,6 +739,142 @@ has-props
 
 
 3525
+
+add.png
+file
+25
+
+
+
+2018-11-15T10:23:28.000000Z
+c6a4f2b54d4e639695de38cb3d6a9056
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+322
+
+dheigh.png
+file
+25
+
+
+
+2018-11-15T10:34:04.000000Z
+5b9db56710d63d288ace1c4a6d75a318
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2232
+
+hotmr.png
+file
+25
+
+
+
+2018-11-15T10:08:33.000000Z
+e20b1f37f6bac03445155e2b8ef44dbe
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4319
+
+fslow.png
+file
+25
+
+
+
+2018-11-15T10:34:32.000000Z
+3767889d14dc8122b54b56ebb9204ecf
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1642
 
 airO.png
 file
@@ -603,6 +943,40 @@ has-props
 
 
 1042
+
+airOpen.png
+file
+25
+
+
+
+2018-11-15T10:26:13.000000Z
+d066d462d91b9b8022bf72dec339c4b2
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1561
 
 historyList.png
 file
@@ -1080,6 +1454,40 @@ has-props
 
 862
 
+fauto.png
+file
+25
+
+
+
+2018-11-15T10:34:50.000000Z
+b1462e50c7bc9173789bc0f29ac0f89a
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2011
+
 projectionC.png
 file
 
@@ -1113,6 +1521,40 @@ has-props
 
 
 2063
+
+coldmr.png
+file
+25
+
+
+
+2018-11-15T10:13:06.000000Z
+118c0336e211072db0ec9f492c4dff39
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4840
 
 screenC.png
 file
@@ -1215,6 +1657,40 @@ has-props
 
 
 637
+
+coldC.png
+file
+25
+
+
+
+2018-11-15T10:05:21.000000Z
+37e901726ec6e02a87f34fd8ec4e99a4
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5408
 
 videoO.png
 file
@@ -1351,6 +1827,74 @@ has-props
 
 
 1418
+
+sendmr.png
+file
+25
+
+
+
+2018-11-15T10:18:42.000000Z
+b0c9d568175955fe281f950e3acf19b3
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4768
+
+fmin.png
+file
+25
+
+
+
+2018-11-15T10:33:51.000000Z
+839125ede4265147b7254430c390bd0a
+2018-11-16T06:38:46.579075Z
+25
+huangbin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1517
 
 local.png
 file

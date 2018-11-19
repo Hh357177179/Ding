@@ -1,7 +1,7 @@
 10
 
 dir
-21
+23
 http://huangbin@172.17.2.254:8080/svn/DingSmart/H5/DingSmart/pages/telbinding
 http://huangbin@172.17.2.254:8080/svn/DingSmart
 
@@ -130,14 +130,14 @@ huangbin
 
 telbinding.js
 file
+24
 
 
 
-
-2018-11-09T06:48:08.000000Z
-ffd79d3f06191f83f5b44d95c6e5db9a
-2018-11-14T06:59:52.257085Z
-18
+2018-11-15T10:21:07.000000Z
+891e1b93781e717bed3b40d1f34ff89b
+2018-11-16T06:37:46.468565Z
+24
 huangbin
 
 
@@ -160,5 +160,5 @@ huangbin
 
 
 
-3543
+3590
 

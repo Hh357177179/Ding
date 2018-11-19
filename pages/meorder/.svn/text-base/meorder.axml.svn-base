@@ -2,7 +2,7 @@
 	<block>
 		<block a:for='{{meorderList}}' a:key="index">
 			<view class="orderList">
-			<view class="cardTime">{{item.nowtext}} 15:44</view>
+			<view class="cardTime">{{item.addTime}}</view>
 			<view class="cardMain">
 				<view class="cardTop" onTap="propOpen" data-index="{{index}}">
 					<view class="cardPic">
@@ -11,7 +11,7 @@
 					</view>
 					<view class="cardText">
 						<view class="cardTitle">
-							<text>会议室{{item.roomName}}</text>
+							<text>{{item.meetingTheme}}</text>
 							<text class="week">{{item.week}}</text>
 						</view>
 						<view class="userTime">

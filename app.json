@@ -9,7 +9,8 @@
     "pages/meetdetail/meetdetail",
     "pages/meetDevice/meetDevice",
     "pages/personalDetail/personalDetail",
-    "pages/aboutMe/aboutMe"
+    "pages/aboutMe/aboutMe",
+    "pages/aboutMeSec/aboutMe"
   ],
   "window": {
     "defaultTitle": "控客智享"

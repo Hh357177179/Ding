@@ -117,6 +117,7 @@ Page({
 										if (res.resultCode == 200) {
 											console.log('获取token',res)
 											app.globalData.token = res.result.token
+											app.globalData.uid = res.result.uid
 											let paramsS = {
 												token: res.result.token
 											}

@@ -8,6 +8,7 @@ page{
 	border: 1px solid rgba(0,0,0,0);
 	font-size: 20rpx;
 	color: #f00;
+	padding-bottom: 40rpx;
 }
 .homeCard{
 	margin-top: 32rpx;

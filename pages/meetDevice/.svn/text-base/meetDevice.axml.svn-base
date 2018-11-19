@@ -30,7 +30,7 @@
 				<view class="screenMain">
 					<scroll-view class="screen_scroll" scroll-x="{{true}}">
 						<block a:for="{{scenceArr}}" a:key="index">
-							<view class="prop-screen">
+							<view class="prop-screen" onTap="executeScene" data-id="{{item.id}}">
 								<view class="scree_left">
 									<view class="screeIcon">
 										<image src="../../image/openClose.png" mode="scaleToFill" />
@@ -59,7 +59,7 @@
 				<view class="device_main">
 					<scroll-view scroll-x="{{true}}" class="my_scroll"> 
 						<block a:for="{{meetDeviceArr}}" a:key="index">
-							<view class="device_list" a:if="{{item.device_type_sts_code != 'Sts_ZIGBEE_DoorSensor'}}">
+							<view class="device_list" data-item="{{item}}" onTap="tapDevice" data-propVal="{{item.device_status.switch}}" data-nodeId='{{item.device_node_id}}' data-mac='{{item.device_mac}}' data-hcode='{{item.host_code}}' data-plantCode="{{item.plant_code}}" data-deviceType="{{item.device_type_sts_code}}" data-enterId="{{item.enterprise_id}}" data-enterCode="{{item.enterprise_code}}" a:if="{{item.device_type_sts_code != 'Sts_ZIGBEE_DoorSensor' && item.device_type_sts_code != 'Sts_ZIGBEE_CodedLock'}}">
 								<block a:if="{{item.device_status.switch == 'Off'}}">
 									<view class="device_pic">
 										<image class="localIcon" a:if="{{item.device_type_sts_code == 'Sts_ZIGBEE_FancoilUnit'}}" src="../../image/airC.png" mode="scaleToFill" />
@@ -94,8 +94,97 @@
 				<view class="clear"></view>
 			</view>
 			<view class="botTextBtn">
-				<view class="remind_text">会议开始前15分钟可开门</view>
-				<view class="btnBot">开门</view>
+				<view class="remind_text" a:if="{{openText}}">会议开始前15分钟可开门</view>
+				<view class="btnBot" onTap="noOpen" a:if="{{openText}}">开门</view>
+				<view class="btnBot openBtn" onTap="tapOpenDoor" a:else>开门</view>
 			</view>
 		</view>
+		<!-- 空调面板 -->
+	<view class="airBack" a:if="{{airPanelShow}}" onTap="closeMask"></view>
+	<view class="airpanel" a:if="{{panelShow}}">
+	<view class="airOffMask" a:if="{{airItem.device_status.switch == 'Off'}}"></view>
+	<view class="topTitle">
+		<view class="airtit">
+			<view class="airname">{{airItem.device_name}}</view>
+			<view class="airtemp">当前{{airItem.device_status.num_value}}℃</view>
+		</view>
+		<view class="openBtnIcon" onTap="openAir" data-dtype="{{airItem.device_type_sts_code}}" data-open="{{airItem.device_status.switch}}">
+			<image src="../../image/airOpen.png" mode="scaleToFill" />
+		</view>
+		<view class="clear">
+		</view>
+	</view>
+	<view a:if="{{airItem.device_status.runModel != 'WIND'}}">
+		<view class="airNum">
+			<view class="airpattern">
+				<text a:if="{{airItem.device_status.runModel == 'COLD'}}">制冷</text>
+				<text a:if="{{airItem.device_status.runModel == 'HOT'}}">制热</text>
+				<text class="doat">•</text>
+				<text a:if="{{airItem.device_status.speed == 'LOW'}}">低风速</text>
+				<text a:if="{{airItem.device_status.speed == 'MID'}}">中风速</text>
+				<text a:if="{{airItem.device_status.speed == 'HIGH'}}">高风速</text>
+				<text a:if="{{airItem.device_status.speed == 'AUTO'}}">自动风</text>
+			</view>
+			<view class="airNumber">{{setVal}}					
+				<text class="tempIcon">℃</text>
+			</view>
+		</view>
+		<view class="airplan">
+			<view class="subtractIcon" onTap="subtractIcon">
+				<image src="../../image/subtract.png" mode="scaleToFill" />
+			</view>
+			<view class="plan-view">
+				<slider onChange="changeSlider" class="slider_view" trackSize='4' value="{{setVal}}" handleSize='20' min="10" max="40" step="0.5" />
+			</view>
+			<view class="addIcon" onTap="addIcon">
+				<image src="../../image/add.png" mode="scaleToFill" />
+			</view>
+			<view class="clear">
+			</view>
+		</view>
+	</view>	
+	<view class="sendWind" a:else>
+		<view class="snedPic">
+			<image a:if="{{airItem.device_status.speed == 'LOW'}}" src="../../image/sendL.png" mode="scaleToFill" />
+			<image a:if="{{airItem.device_status.speed == 'MID'}}" src="../../image/sendM.png" mode="scaleToFill" />
+			<image a:if="{{airItem.device_status.speed == 'HIGH'}}" src="../../image/sendH.png" mode="scaleToFill" />
+		</view>
+		<view class="sendText">
+			<text>送风</text>
+			<text class="doat">•</text>
+			<text a:if="{{airItem.device_status.speed == 'LOW'}}">低风速</text>
+			<text a:if="{{airItem.device_status.speed == 'MID'}}">中风速</text>
+			<text a:if="{{airItem.device_status.speed == 'HIGH'}}">高风速</text>
+		</view>
+	</view>
+	<view class="botBtnIcon">
+		<view class="onlyIcon">
+			<image a:if="{{airItem.device_status.runModel == 'COLD'}}" src="../../image/coldC.png" mode="scaleToFill" />
+			<image onTap="cCold" a:else src="../../image/coldmr.png" mode="scaleToFill" />
+		</view>
+		<view class="onlyIcon">
+			<image a:if="{{airItem.device_status.runModel == 'HOT'}}" src="../../image/hotC.png" mode="scaleToFill" />
+			<image onTap="cHot" a:else src="../../image/hotmr.png" mode="scaleToFill" />
+		</view>
+		<view class="onlyIcon">
+			<image a:if="{{airItem.device_status.runModel == 'WIND'}}" src="../../image/windC.png" mode="scaleToFill" />
+			<image onTap="cSend" a:else src="../../image/sendmr.png" mode="scaleToFill" />
+		</view>
+		<view class="smallIcon" a:if="{{airItem.device_status.runModel == 'WIND'}}">
+			<!-- <image a:if="{{airItem.device_status.speed == 'AUTO'}}" src="../../image/fauto.png" mode="scaleToFill" /> -->
+			<image onTap="cWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'LOW'}}" src="../../image/fslow.png" mode="scaleToFill" />
+			<image onTap="cWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'MID'}}" src="../../image/fmin.png" mode="scaleToFill" />
+			<image onTap="cWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'HIGH'}}" src="../../image/dheigh.png" mode="scaleToFill" />
+		</view>
+		<view class="smallIcon" a:else>
+			<image onTap="makeWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'AUTO'}}" src="../../image/fauto.png" mode="scaleToFill" />
+			<image onTap="makeWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'LOW'}}" src="../../image/fslow.png" mode="scaleToFill" />
+			<image onTap="makeWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'MID'}}" src="../../image/fmin.png" mode="scaleToFill" />
+			<image onTap="makeWinds" data-winds="{{airItem.device_status.speed}}" a:if="{{airItem.device_status.speed == 'HIGH'}}" src="../../image/dheigh.png" mode="scaleToFill" />
+		</view>
+	</view>
+	<!-- 窗帘 -->
+
+	<!-- 推窗器 -->
+</view>
 </view>

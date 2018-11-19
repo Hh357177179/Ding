@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 45
 /svn/DingSmart/!svn/ver/21/H5/DingSmart/image
 END
+hotC.png
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/hotC.png
+END
 screenO.png
 K 25
 svn:wc:ra_dav:version-url
@@ -21,17 +27,41 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/screenOpen.png
 END
+sendH.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/sendH.png
+END
 motorC.png
 K 25
 svn:wc:ra_dav:version-url
 V 56
 /svn/DingSmart/!svn/ver/21/H5/DingSmart/image/motorC.png
 END
+windC.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/windC.png
+END
+sendL.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/sendL.png
+END
 doorC.png
 K 25
 svn:wc:ra_dav:version-url
 V 55
 /svn/DingSmart/!svn/ver/21/H5/DingSmart/image/doorC.png
+END
+sendM.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/sendM.png
 END
 list.png
 K 25
@@ -87,17 +117,47 @@ svn:wc:ra_dav:version-url
 V 55
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/scale.png
 END
+subtract.png
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/subtract.png
+END
 closes.png
 K 25
 svn:wc:ra_dav:version-url
 V 56
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/closes.png
 END
+add.png
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/add.png
+END
+dheigh.png
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/dheigh.png
+END
+hotmr.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/hotmr.png
+END
 airO.png
 K 25
 svn:wc:ra_dav:version-url
 V 54
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/airO.png
+END
+fslow.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/fslow.png
 END
 aboutme.png
 K 25
@@ -110,6 +170,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/historyList.png
+END
+airOpen.png
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/airOpen.png
 END
 privacyOpen.png
 K 25
@@ -129,17 +195,17 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/noDataorder.png
 END
-privacyClose.png
-K 25
-svn:wc:ra_dav:version-url
-V 62
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/privacyClose.png
-END
 leftIcon.png
 K 25
 svn:wc:ra_dav:version-url
 V 58
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/leftIcon.png
+END
+privacyClose.png
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/privacyClose.png
 END
 chistory.png
 K 25
@@ -165,23 +231,17 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/lightC.png
 END
-order.png
-K 25
-svn:wc:ra_dav:version-url
-V 55
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/order.png
-END
 flool.png
 K 25
 svn:wc:ra_dav:version-url
 V 55
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/flool.png
 END
-clist.png
+order.png
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/clist.png
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/order.png
 END
 corder.png
 K 25
@@ -189,11 +249,29 @@ svn:wc:ra_dav:version-url
 V 56
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/corder.png
 END
+clist.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/18/H5/DingSmart/image/clist.png
+END
+fauto.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/fauto.png
+END
 projectionC.png
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/projectionC.png
+END
+coldmr.png
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/coldmr.png
 END
 ctrue.png
 K 25
@@ -212,6 +290,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 58
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/curtainO.png
+END
+coldC.png
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/coldC.png
 END
 videoO.png
 K 25
@@ -236,6 +320,18 @@ K 25
 svn:wc:ra_dav:version-url
 V 59
 /svn/DingSmart/!svn/ver/18/H5/DingSmart/image/openClose.png
+END
+sendmr.png
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/sendmr.png
+END
+fmin.png
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/DingSmart/!svn/ver/25/H5/DingSmart/image/fmin.png
 END
 local.png
 K 25

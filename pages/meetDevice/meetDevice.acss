@@ -381,3 +381,49 @@ page{
 	line-height:33rpx;
 	margin-bottom: 78rpx;
 }
+.curtain{
+	width: 610rpx;
+	/* height: 200rpx; */
+	background: #fff;
+	border-radius:12px;
+	padding: 40rpx;
+	position: fixed;
+	top: 200rpx;
+	left: calc(50% - 345rpx);
+	z-index: 13;
+}
+.curtain_title{
+	font-size: 34rpx;
+	font-weight: 500;
+	color: #191F25;
+	line-height: 44rpx;
+}
+.curtain_status{
+	font-weight:400;
+	color:rgba(25,31,37,0.28);
+	line-height:33rpx;
+	font-size:24rpx;
+	margin-top: 10rpx;
+}
+.device_pics{
+	width: 280rpx;
+	height: 280rpx;
+	margin: 30rpx auto 80rpx;
+}
+.device_pics image {
+	width: 100%;
+	height: 100%;
+}
+.handle_device{
+	padding: 0 130rpx 20rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.handle_Btn{
+	padding: 0 10rpx 15rpx;
+	/* background: #ccc; */
+}
+.handle_Btn image{
+	width: 48rpx;
+	height: 48rpx;
+}

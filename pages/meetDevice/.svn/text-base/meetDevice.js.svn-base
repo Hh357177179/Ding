@@ -5,6 +5,8 @@ let deviceThis = null
 
 Page({
   data: {
+		panelAllshow: false,
+		panelItem: {},
 		nowdates: '',
 		openTimes: '',
 		airNodeId: '',
@@ -88,11 +90,13 @@ Page({
 			// 接收改变设备当前状态
 			if (JSON.parse(e.data).requester == 'DeviceStatus') {
 				if (devicePush.device_node_id == deviceThis.data.doorId) {
-					util.showMsg('success','开门成功')
+					if (devicePush.device_status.doorsensor_switch == "On") {
+						util.showMsg('success', '开门成功')
+					}
 				}
 				// console.log('接收推送到的参数',devicePush)
 				// console.log(devicePush.device_type_sts_code)
-				if (devicePush.device_type_sts_code == 'Sts_ZIGBEE_Light' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_FancoilUnit' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_CodedLock' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_CurtainMotor') {
+				if (devicePush.device_type_sts_code == 'Sts_ZIGBEE_Light' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_FancoilUnit' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_CodedLock' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_ProjectionCurtainMotor' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_CurtainMotor' || devicePush.device_type_sts_code == 'Sts_ZIGBEE_WindowPusherMotor') {
 					console.log('设备')
 					console.log('接收推送到的参数', devicePush)
 					let device_index = deviceThis.data.meetDeviceArr.findIndex(d => d.device_node_id == devicePush.device_node_id)
@@ -111,6 +115,11 @@ Page({
 							setVal: parseFloat(devicePush.device_status.set_num_value).toFixed(1),
 						})
 					}
+					if (deviceThis.data.airNodeId == devicePush.device_node_id && deviceThis.data.panelAllshow == true) {
+						deviceThis.setData({
+							panelItem: devicePush
+						})
+					}
 				}
 			}
 		});
@@ -124,11 +133,9 @@ Page({
 			// console.log(e)
 			let eValue = e.currentTarget.dataset
 			let valuCode = eValue.propVal
-			if (eValue.deviceType != 'Sts_ZIGBEE_FancoilUnit') {
+		if (eValue.deviceType != 'Sts_ZIGBEE_FancoilUnit' && eValue.deviceType != 'Sts_ZIGBEE_CurtainMotor' && eValue.deviceType != 'Sts_ZIGBEE_ProjectionCurtainMotor' && eValue.deviceType != 'Sts_ZIGBEE_WindowPusherMotor') {
 				if (valuCode == 'On') {
 					valuCode = "Off"
-				} else if (valuCode == 'Stop') {
-					valuCode = "On"
 				} else {
 					valuCode = "On"
 				}
@@ -151,7 +158,7 @@ Page({
 				sendObj.enterprise_code = eValue.enterCode
 				console.log(123123, sendObj)
 				this.sendDatas(JSON.stringify(sendObj))
-			} else if (eValue.deviceType != 'Sts_ZIGBEE_CurtainMotor') {
+			} else if (eValue.deviceType == 'Sts_ZIGBEE_FancoilUnit') {
 				// let airItem = eValue.item
 				let airItem = this.data.meetDeviceArr.filter(x => x.device_node_id == eValue.nodeId)
 				// console.log(airItem)
@@ -162,8 +169,89 @@ Page({
 					setVal: parseFloat(airItem[0].device_status.set_num_value).toFixed(1),
 					airNodeId: eValue.nodeId
 				})
+			} else {
+				let airItem = this.data.meetDeviceArr.filter(x => x.device_node_id == eValue.nodeId)
+				console.log(airItem)
+				this.setData({
+					airPanelShow: true,
+					panelItem: airItem[0],
+					panelAllshow: true,
+					airNodeId: eValue.nodeId
+				})
 			}
 		}
+	},
+
+	// 开
+	handleOpen () {
+		let that = this
+		let sendObj = {}
+		sendObj.arg = {
+			"prop_code": 'Switch',
+			"prop_value_code": 'On',
+			"device_node_id": that.data.panelItem.device_node_id,
+			"device_mac": that.data.panelItem.device_mac,
+			"host_code": that.data.panelItem.host_code,
+			"plant_code": that.data.panelItem.plant_code,
+			"device_type_sts_code": that.data.panelItem.device_type_sts_code
+		}
+		sendObj.request_time = that.data.nowDate,
+		sendObj.user_id = app.globalData.userId,
+		sendObj.user_token = '123',
+		sendObj.request_cmd = "Switch",
+		sendObj.reply_queue_name = `StS.st.${app.globalData.userId}`,
+		sendObj.enterprise_id = that.data.panelItem.enterprise_id,
+		sendObj.enterprise_code = that.data.panelItem.enterprise_code
+		console.log(2222, sendObj)
+		that.sendDatas(JSON.stringify(sendObj))
+	},
+
+	// 停
+	handleStop () {
+		let that = this
+		let sendObj = {}
+		sendObj.arg = {
+			"prop_code": 'Switch',
+			"prop_value_code": 'Stop',
+			"device_node_id": that.data.panelItem.device_node_id,
+			"device_mac": that.data.panelItem.device_mac,
+			"host_code": that.data.panelItem.host_code,
+			"plant_code": that.data.panelItem.plant_code,
+			"device_type_sts_code": that.data.panelItem.device_type_sts_code
+		}
+		sendObj.request_time = that.data.nowDate,
+		sendObj.user_id = app.globalData.userId,
+		sendObj.user_token = '123',
+		sendObj.request_cmd = "Switch",
+		sendObj.reply_queue_name = `StS.st.${app.globalData.userId}`,
+		sendObj.enterprise_id = that.data.panelItem.enterprise_id,
+		sendObj.enterprise_code = that.data.panelItem.enterprise_code
+		console.log(2222, sendObj)
+		that.sendDatas(JSON.stringify(sendObj))
+	},
+
+	// 关
+	handleClose () {
+		let that = this
+		let sendObj = {}
+		sendObj.arg = {
+			"prop_code": 'Switch',
+			"prop_value_code": 'Off',
+			"device_node_id": that.data.panelItem.device_node_id,
+			"device_mac": that.data.panelItem.device_mac,
+			"host_code": that.data.panelItem.host_code,
+			"plant_code": that.data.panelItem.plant_code,
+			"device_type_sts_code": that.data.panelItem.device_type_sts_code
+		}
+		sendObj.request_time = that.data.nowDate,
+		sendObj.user_id = app.globalData.userId,
+		sendObj.user_token = '123',
+		sendObj.request_cmd = "Switch",
+		sendObj.reply_queue_name = `StS.st.${app.globalData.userId}`,
+		sendObj.enterprise_id = that.data.panelItem.enterprise_id,
+		sendObj.enterprise_code = that.data.panelItem.enterprise_code
+		console.log(2222, sendObj)
+		that.sendDatas(JSON.stringify(sendObj))
 	},
 
 	// 减
@@ -230,17 +318,12 @@ Page({
 		}
 	},
 
-	// 设置温度
-	setTempNum () {
-		let that = this
-		
-	},
-
 	// 关闭空调面板
 	closeMask () {
 		this.setData({
 			airPanelShow: false,
 			panelShow: false,
+			panelAllshow: false
 		})
 	},
 

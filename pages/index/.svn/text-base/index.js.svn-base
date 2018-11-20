@@ -44,14 +44,7 @@ Page({
 			pageSize: that.data.size
 		}
 		getRequest(`/meeting/getMeetRoom`, params, true).then(res => {
-			// console.log('会议室列表', res)
-			// for (let i = 0, len = res.result.length; i < len; i ++) {
-				// console.info('配套设施', res.result[i].lstdate)
-			// }
-			// console.log(res.result.list[0].lstdate[18])
-			// console.log(res.result.list[0].lstdate[38])
 			for (let i = 0,len = res.result.list.length; i < len;i++) {
-				// console.log(res.result.list[i].lstdate.slice(18,38))
 				res.result.list[i].lstdate = res.result.list[i].lstdate.slice(18, 38)
 			}
 			that.setData({

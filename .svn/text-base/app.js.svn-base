@@ -3,9 +3,10 @@ import { getRequest } from './httpRequest'
 let aPage = null;
 App({
   onLaunch(options) {
+		console.log(options)
 		aPage = this
 		dd.connectSocket({
-			url: 'ws://172.17.130.55:8888',
+			url: 'ws://172.17.130.55:8889',
       success(e) {
         console.log('创建成功');
 				dd.onSocketOpen(function(e) {
@@ -25,6 +26,7 @@ App({
 		this.globalData.corpId = corpId
 		dd.getAuthCode({
 			success: resAuther => {
+				console.log(resAuther)
 				dd.httpRequest({
 					url: `${util.baseUrl}/index/authorization`,
 					method: 'GET',	

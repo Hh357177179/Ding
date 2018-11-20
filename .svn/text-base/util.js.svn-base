@@ -1,3 +1,4 @@
+// const baseUrl = 'http://ding.smart.hotelclub8.com'
 const baseUrl = 'http://share.vaiwan.com:8081'
 
 const showMsg = function(Icon,msg) {
